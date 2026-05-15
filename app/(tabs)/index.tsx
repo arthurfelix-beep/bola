@@ -18,7 +18,7 @@ A partida é dividida em dois tempos de 45 minutos, e vence a equipe que marcar 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#63a9be',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 10,

@@ -6,7 +6,7 @@ export default function Index() {
     <View style={styles.container}>
       <Text style={styles.text}>
         Sou Arthur Felix e tenho 16 anos 
-        e esse é meu site sobre futebol
+        e esse é meu site sobre futebol, bem vindo!
       </Text>
     </View>
   );
@@ -15,7 +15,7 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#d1c237',
+    backgroundColor: '#5047d1',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 10,
