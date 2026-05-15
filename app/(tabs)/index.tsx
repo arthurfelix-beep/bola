@@ -1,16 +1,21 @@
-import { Text, View, StyleSheet } from "react-native";
-import { Link } from 'expo-router';
+import { View, StyleSheet } from 'react-native';
+
+import Button from '@/components/button';
+import ImageViewer from '@/components/ImageViewer';
+
+const PlaceholderImage = require('@/assets/images/background-image.png');
 
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>
-        O futebol é um esporte coletivo jogado entre duas equipes de 11 jogadores em um campo retangular com duas traves. O objetivo é marcar gols ao colocar a bola dentro da meta adversária, utilizando principalmente os pés, mas também outras partes do corpo, exceto as mãos (com exceção do goleiro).
+      <View style={styles.imageContainer}>
+        <ImageViewer placeholderImage={PlaceholderImage} />
+      </View>
 
-A partida é dividida em dois tempos de 45 minutos, e vence a equipe que marcar mais gols. O futebol é conhecido por sua simplicidade, dinâmica e por ser o esporte mais popular do mundo, praticado e acompanhado por milhões de pessoas em diversos países.
-
-      </Text>
-
+      <View style={styles.footerContainer}>
+        <Button theme="primary" label="Choose a photo" />
+        <Button label="Use this photo" />
+      </View>
     </View>
   );
 }
@@ -18,17 +23,17 @@ A partida é dividida em dois tempos de 45 minutos, e vence a equipe que marcar 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#25292e',
     alignItems: 'center',
-    justifyContent: 'center',
-    padding: 10,
   },
-  text: {
-    color: '#000000',
+
+  imageContainer: {
+    flex: 1,
+    paddingTop: 28,
   },
-  button: {
-    fontSize: 20,
-    textDecorationLine: 'underline',
-    color: '#fff',
+
+  footerContainer: {
+    flex: 1 / 3,
+    alignItems: 'center',
   },
 });
